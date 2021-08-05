@@ -76,12 +76,31 @@ body {
     border-radius: 0 0 6px 6px;
 }
 
-.column-button {
+.column-button__first {
     width: 120px;
     height: 40px;
     border-radius: 18px;
     border-style: none;
     background-color: var(--very-light-gray);
+    color: var(--bright-orange);
+}
+
+.column-button__second {
+    width: 120px;
+    height: 40px;
+    border-radius: 18px;
+    border-style: none;
+    background-color: var(--very-light-gray);
+    color: var(--dark-cyan);
+}
+
+.column-button__third {
+    width: 120px;
+    height: 40px;
+    border-radius: 18px;
+    border-style: none;
+    background-color: var(--very-light-gray);
+    color: var(--very-dark-cyan);
 }
 
 h1 {
@@ -92,10 +111,56 @@ h1 {
 }
 
 p {
+    font-family: 'Lexend Deca', sans-serif;
     color: var(--transparent-white);
+    font-size: 14px;
     margin-bottom: 20px;
 }
 
 .attribution {
     margin: 20px;
+}
+
+@media (min-width: 1024px) {
+  
+    .column-box {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .column-box__first {       
+        height: 55vh;
+        border-radius: 6px 0 0 6px;
+    }
+
+    .column-box__second { 
+        height: 55vh;
+    }
+
+    .column-box__third {
+        height: 55vh;
+        border-radius: 0 6px 6px 0;    
+    }
+
+    p {
+        font-size: 15px;
+    } 
+    
+    :hover.column-button__first,
+    :hover.column-button__second,
+    :hover.column-button__third {
+        background: transparent;
+        border: 2px solid white;
+        color: white;
+        cursor: pointer;
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
 }
